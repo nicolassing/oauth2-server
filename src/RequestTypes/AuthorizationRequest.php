@@ -13,7 +13,7 @@ use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Entities\ScopeEntityInterface;
 use League\OAuth2\Server\Entities\UserEntityInterface;
 
-class AuthorizationRequest
+class AuthorizationRequest implements AuthorizationRequestInterface
 {
     /**
      * The grant type identifier
@@ -79,7 +79,7 @@ class AuthorizationRequest
     protected $codeChallengeMethod;
 
     /**
-     * @return string
+     * @inheritdoc
      */
     public function getGrantTypeId()
     {
@@ -87,7 +87,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param string $grantTypeId
+     * @inheritdoc
      */
     public function setGrantTypeId($grantTypeId)
     {
@@ -95,7 +95,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return ClientEntityInterface
+     * @inheritdoc
      */
     public function getClient()
     {
@@ -103,7 +103,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param ClientEntityInterface $client
+     * @inheritdoc
      */
     public function setClient(ClientEntityInterface $client)
     {
@@ -111,7 +111,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return UserEntityInterface
+     * @inheritdoc
      */
     public function getUser()
     {
@@ -119,7 +119,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param UserEntityInterface $user
+     * @inheritdoc
      */
     public function setUser(UserEntityInterface $user)
     {
@@ -127,7 +127,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return ScopeEntityInterface[]
+     * @inheritdoc
      */
     public function getScopes()
     {
@@ -135,7 +135,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param ScopeEntityInterface[] $scopes
+     * @inheritdoc
      */
     public function setScopes(array $scopes)
     {
@@ -143,7 +143,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return bool
+     * @inheritdoc
      */
     public function isAuthorizationApproved()
     {
@@ -151,7 +151,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param bool $authorizationApproved
+     * @inheritdoc
      */
     public function setAuthorizationApproved($authorizationApproved)
     {
@@ -159,7 +159,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return string|null
+     * @inheritdoc
      */
     public function getRedirectUri()
     {
@@ -167,7 +167,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param string|null $redirectUri
+     * @inheritdoc
      */
     public function setRedirectUri($redirectUri)
     {
@@ -175,7 +175,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return string|null
+     * @inheritdoc
      */
     public function getState()
     {
@@ -183,7 +183,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param string $state
+     * @inheritdoc
      */
     public function setState($state)
     {
@@ -191,7 +191,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
     public function getCodeChallenge()
     {
@@ -199,7 +199,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param string $codeChallenge
+     * @inheritdoc
      */
     public function setCodeChallenge($codeChallenge)
     {
@@ -207,7 +207,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
     public function getCodeChallengeMethod()
     {
@@ -215,7 +215,7 @@ class AuthorizationRequest
     }
 
     /**
-     * @param string $codeChallengeMethod
+     * @inheritdoc
      */
     public function setCodeChallengeMethod($codeChallengeMethod)
     {
