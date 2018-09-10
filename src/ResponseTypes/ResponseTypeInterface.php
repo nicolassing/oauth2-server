@@ -24,19 +24,9 @@ interface ResponseTypeInterface
     public function setAccessToken(AccessTokenEntityInterface $accessToken);
 
     /**
-     * @return AccessTokenEntityInterface
-     */
-    public function getAccessToken();
-
-    /**
      * @param RefreshTokenEntityInterface $refreshToken
      */
     public function setRefreshToken(RefreshTokenEntityInterface $refreshToken);
-
-    /**
-     * @return RefreshTokenEntityInterface
-     */
-    public function getRefreshToken();
 
     /**
      * @param ResponseInterface $response
