@@ -25,12 +25,12 @@ class ImplicitGrant extends AbstractAuthorizeGrant
     /**
      * @var \DateInterval
      */
-    private $accessTokenTTL;
+    protected $accessTokenTTL;
 
     /**
      * @var string
      */
-    private $queryDelimiter;
+    protected $queryDelimiter;
 
     /**
      * @param \DateInterval $accessTokenTTL

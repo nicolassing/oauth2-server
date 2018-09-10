@@ -27,12 +27,12 @@ class AuthCodeGrant extends AbstractAuthorizeGrant
     /**
      * @var \DateInterval
      */
-    private $authCodeTTL;
+    protected $authCodeTTL;
 
     /**
      * @var bool
      */
-    private $enableCodeExchangeProof = false;
+    protected $enableCodeExchangeProof = false;
 
     /**
      * @param AuthCodeRepositoryInterface     $authCodeRepository
