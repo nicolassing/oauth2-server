@@ -52,6 +52,22 @@ abstract class AbstractResponseType implements ResponseTypeInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getAccessToken()
+    {
+        return $this->accessToken;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRefreshToken()
+    {
+        return $this->refreshToken;
+    }
+
+    /**
      * Set the private key
      *
      * @param \League\OAuth2\Server\CryptKey $key
